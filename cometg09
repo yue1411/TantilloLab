@@ -1,0 +1,26 @@
+#!/bin/bash
+#echo ""
+#echo "Enter desired walltime in hours (integer only, max is 48)"
+#echo ""
+#read time
+input_file="#!/bin/bash
+#SBATCH --partition=shared
+#SBATCH --nodes=1
+#SBATCH --ntasks-per-node=8
+#SBATCH --export=ALL
+#SBATCH -t 1:00:00
+#SBATCH --mail-type=END,FAIL
+#SBATCH --mail-user=yourEmail@ucdavis.edu
+
+export my_file=in_file
+. /etc/profile.d/modules.sh
+module load gaussian
+#cd \$SBATCH_O_WORKDIR
+export GAUSS_SCRDIR=/scratch/\${USER}/\${SLURM_JOB_ID}
+g09 < in_file > id_name.log"
+
+root_name=$(basename $1 .com)
+input_file=$(echo "$input_file" | sed -e s/in_file/$1/g -e s/id_name/$root_name/g)
+echo "$input_file" > $root_name.job
+
+
