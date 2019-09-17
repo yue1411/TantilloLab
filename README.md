@@ -21,11 +21,12 @@ This section is meant to help you set up comet supercomputer account and help yo
 3. [Set up Job Script](#3)
 4. [Run Gaussian jobs](#4)
 5. [Keep track of your usage](#5)
-6. [Questions about Comet?](#6)
+6. [Common questions and errors](#6)
+0. [Questions about Comet?](#6)
 
 <a name="1"><a/>
 #### 1. Set up XSEDE account / Obtain Gaussian permission
-1.	Go to [XSEDE portal](portal.xsede.org/#/guest), then go to Create Account.
+1.	Go to [XSEDE portal](http://portal.xsede.org/#/guest), then go to Create Account.
 2.	Remember your username/password.
 3.	Email Dean and ask to be added to XSEDE group account.
 ![](images/Picture1.png)
@@ -105,11 +106,23 @@ Here’s a sample .com file:
 <a name="5"><a/>
     Log into your XSEDE web account/user portal, and under “allocations/usage” it should have the recommended burn rate so you can keep a good pace. 
 
-#### 6. Questions about Comet?
+#### 6.Common questions and errors
+<a name="6"><a/>
+1.  Storage
+    If you encounter “disk space exceed” error when you submit job, means you run out of space in HOME (~100GB, check with du -h /home/username). You can either transfer files to local or somewhere else to save space or:
+- Save files in `/oasis/projects/nsf/ucd114/username`
+- Save files in temporary storage `/oasis/scratch/comet/username/temp_project`  
+    For more information:  
+    https://www.sdsc.edu/support/user_guides/comet.html#storage
+    https://www.sdsc.edu/support/user_guides/oasis.html 
+
+2.  Run CCSD
+    Large jobs like CCSD can be run in here:`/oasis/scratch/comet/userName/temp_project/` and the job succeeded when we used the large-shared partition with 700G and then also use `/oasis/scratch/comet/$USER/temp_project/gscratch` for the scratch location. This location is not ideal for such IO so use it only if the normal approach fails.
+  
+#### 0. Questions about Comet?
 <a name="6"><a/>
 1.	Email Tiffany (yuezh@ucdavis.edu)
-2.	Go to XSEDE user portal and [submit a ticket](https://portal.xsede.org/group/xup/tickets), and submit a ticket.
-
+2.	Go to XSEDE user portal and [submit a ticket](https://portal.xsede.org/group/xup/tickets).
 
 #### Edited: 09-17-17
 
