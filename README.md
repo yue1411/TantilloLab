@@ -59,36 +59,51 @@ Here’s how to make a .job file:
 1.	Set up your Gaussian input file as usual (Please note that the script we have is for job input with ".com" file type so don’t forget to make the respective changes, if you run other input types).
 Here’s a sample .com file:
 
-%nprocshared=8
-%mem=16GB
-%chk=7_mEH.chk
-%nosave
-# opt freq b3lyp/6-31+g(d,p)
+    %nprocshared=8
 
-Title Card Required
+    %mem=16GB
 
-0 1
- C                  1.22871037    0.08515815    0.00000000
- C                  2.62387037    0.08515815    0.00000000
-	……
+    %chk=7_mEH.chk
+
+    %nosave <br />
+    \# opt freq b3lyp/6-31+g(d,p) 
+    <br />
+    Title Card Required
+    <br />
+    0 1
+
+    C                  1.22871037    0.08515815    0.00000000
+
+    C                  2.62387037    0.08515815    0.00000000
+
+    ……
+
 2.	Upload the .com from your computer to Comet, in specific project folders as how you prefer. 
+
 3.	In the folder, type "cometg09 [molecule1].com". A job file should appear as [molecule1].job. Edit the run time of the .job file. For example, #SBATCH -t 1:00:00 means one hour long job.
-Importantly, we are for time based on the processors you indicate in your job file! MAKE SURE YOUR COM FILE HAS
-%nproc=8
-%mem=16GB
+
+    Importantly, we are for time based on the processors you indicate in your job file! MAKE SURE YOUR COM FILE HAS: 
+    %nproc=8
+
+    %mem=16GB
+
 4.	Type "sbatch file.job" to submit your calculation. This job script then waits in a queue, and when it reaches the top will run your job.
-(Note, the queue is controlled by the "Partition" variable as described above. Other than that, you can't control which one run first or second. It all depend on their system calculation based on what processors are available and how much the job is asking for.)
+
+    (Note, the queue is controlled by the "Partition" variable as described above. Other than that, you can't control which one run first or second. It all depend on their system calculation based on what processors are available and how much the job is asking for.)
 
 5.	Job monitoring:
-The program used for this queue is called Slurm. Here are a few basic commands for slurm:
 
-squeue -u username (shows what jobs you’ve submitted, you can create an alias in your ~/.bash_profile so you won't have to type this all the time.)
-squeue | wc -l (the total number of jobs submitted to the supercomputer)
-sbatch file.job (runs your job file)
-scancel ####### (using the job number – you can get this from the queue)
+    The program used for this queue is called Slurm. Here are a few basic commands for slurm:
 
+    `squeue -u username` shows what jobs you’ve submitted, you can create an alias in your ~/.bash_profile so you won't have to type this all the time.
 
-Note: Each job you run will produce a slurm#####.out file, where the number is the same as the job number. These are generally blank, and not important unless you need to troubleshoot a problem with the SLURM system.
+    `squeue | wc -l` the total number of jobs submitted to the supercomputer.
+
+    `sbatch file.job` runs your job file.
+
+    `scancel #######` using the job number – you can get this from the queue.
+
+    Note: Each job you run will produce a slurm#####.out file, where the number is the same as the job number. These are generally blank, and not important unless you need to troubleshoot a problem with the SLURM system.
 
 6. Once the job finishes or terminates with error, the system should email you about the status. 
 
