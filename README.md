@@ -6,9 +6,7 @@ This repository is for Tantillo Lab general information on:
 
 1. Comet account set up and common questions.
 
-2. Gaussian job setup, submitting tricks, syntax... *Coming soon...*
-
-3. Please let me know if you have any question or feedback! (yuezh@ucdavis.edu)
+2. *Coming soon...*
 
 ## 1. Comet new users guide
 
