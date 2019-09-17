@@ -58,34 +58,27 @@ Here’s how to make a .job file:
 <a name="4"><a/>
 1.	Set up your Gaussian input file as usual (Please note that the script we have is for job input with ".com" file type so don’t forget to make the respective changes, if you run other input types).
 Here’s a sample .com file:
-
+```
     %nprocshared=8
-
     %mem=16GB
-
     %chk=7_mEH.chk
-
-    %nosave <br />
-    \# opt freq b3lyp/6-31+g(d,p) 
-    <br />
+    %nosave
+    # opt freq b3lyp/6-31+g(d,p) 
+ 
     Title Card Required
-    <br />
+
     0 1
-
     C                  1.22871037    0.08515815    0.00000000
-
     C                  2.62387037    0.08515815    0.00000000
-
     ……
-
+```
 2.	Upload the .com from your computer to Comet, in specific project folders as how you prefer. 
 
-3.	In the folder, type "cometg09 [molecule1].com". A job file should appear as [molecule1].job. Edit the run time of the .job file. For example, #SBATCH -t 1:00:00 means one hour long job.
-
-    Importantly, we are for time based on the processors you indicate in your job file! MAKE SURE YOUR COM FILE HAS: 
+3.	In the folder, type "cometg09 [molecule1].com". A job file should appear as [molecule1].job. Edit the run time of the .job file. For example, #SBATCH -t 1:00:00 means one hour long job. Importantly, we are for time based on the processors you indicate in your job file! Again, **make sure your com file has**:
+```
     %nproc=8
-
     %mem=16GB
+```
 
 4.	Type "sbatch file.job" to submit your calculation. This job script then waits in a queue, and when it reaches the top will run your job.
 
@@ -110,7 +103,7 @@ Here’s a sample .com file:
 
 #### 5. Keep track of your usage
 <a name="5"><a/>
-Log into your XSEDE web account/user portal, and under “allocations/usage” it should have the recommended burn rate so you can keep a good pace. 
+    Log into your XSEDE web account/user portal, and under “allocations/usage” it should have the recommended burn rate so you can keep a good pace. 
 
 #### 6. Questions about Comet?
 <a name="6"><a/>
@@ -118,12 +111,7 @@ Log into your XSEDE web account/user portal, and under “allocations/usage” i
 2.	Go to XSEDE user portal and [submit a ticket](https://portal.xsede.org/group/xup/tickets), and submit a ticket.
 
 
-##### Edited: 09-17-17
-
-
-
-
-
+#### Edited: 09-17-17
 
 <!-->
 
@@ -162,3 +150,5 @@ This is being *created* on a **Friday** ~~Satruday~~
 - first
     - second
         - third
+
+<!-->
