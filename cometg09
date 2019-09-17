@@ -15,6 +15,7 @@ input_file="#!/bin/bash
 export my_file=in_file
 . /etc/profile.d/modules.sh
 module load gaussian
+#module load gaussian/16.B.01
 #cd \$SBATCH_O_WORKDIR
 export GAUSS_SCRDIR=/scratch/\${USER}/\${SLURM_JOB_ID}
 g09 < in_file > id_name.log"
