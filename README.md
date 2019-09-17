@@ -113,41 +113,43 @@ Here’s a sample .com file:
 
 #### Edited: 09-17-17
 
+<!--
 
+Syntax for myself
 
-[//]: <> Syntax for myself
+1. hyperlink
+[this is the description](https://support.squarespace.com/hc/en-us/articles/206543587-Markdown-cheat-sheet)
 
-[//]: <> 1. hyperlink
-[//]: <> [this is the description](https://support.squarespace.com/hc/en-us/articles/206543587-Markdown-cheat-sheet)
+2. code
+This paragraph has some `variable` inline code.
+```html
+<p>A paragraph example<p/>
+```
+```javascript
+let num= Math.random();
+```
+3. picture
 
-[//]: <> 2. code
-[//]: <> This paragraph has some `variable` inline code.
-[//]: <> ```html
-[//]: <> <p>A paragraph example<p/>
-[//]: <> ```
-[//]: <> ```javascript
-[//]: <> let num= Math.random();
-[//]: <> ```
-[//]: <> 3. picture
+![alt text](http://picsum.photos/200/200)
 
-[//]: <> ![alt text](http://picsum.photos/200/200)
+4. Some paragraph with text
+> blockquote text below the paragraph
 
-[//]: <> 4. Some paragraph with text
-[//]: <> > blockquote text below the paragraph
+5. Tables
 
-[//]: <> 5. Tables
+| heading | header | head |
+| --- | --- | --- |  
+| content | more content | text |
+| more | more  | more |
 
-[//]: <> | heading | header | head |
-[//]: <> | --- | --- | --- |  
-[//]: <> | content | more content | text |
-[//]: <> | more | more  | more |
+6. Text
 
-[//]: <> 6. Text
+This is being *created* on a **Friday** ~~Satruday~~
 
-[//]: <> This is being *created* on a **Friday** ~~Satruday~~
+7. List
+- first
+    - second
+        - third
 
-[//]: <> 7. List
-[//]: <> - first
-[//]: <>     - second
-[//]: <>         - third
+-->
 
