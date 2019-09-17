@@ -119,7 +119,7 @@ Here’s a sample .com file:
 
 2.  Run CCSD
 
-    Large jobs like CCSD can be run in here:`/oasis/scratch/comet/userName/temp_project/` and the job succeeded when we used the large-shared partition with 700G and then also use `/oasis/scratch/comet/$USER/temp_project/gscratch` for the scratch location. This location is not ideal for such IO so use it only if the normal approach fails.
+    Large jobs like CCSD can be run in here:`/oasis/scratch/comet/userName/temp_project/`, use the large-shared partition with 700G and then also use `/oasis/scratch/comet/$USER/temp_project/gscratch` for the scratch location. This location is not ideal for such IO so use it **only** if the normal approach fails.
   
 #### 0. Questions about Comet?
 <a name="6"><a/>
