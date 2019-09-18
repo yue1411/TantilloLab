@@ -48,7 +48,7 @@ Here’s how to make a .job file:
 
 1. Download “cometg09” in the github repository. Sync it to your Comet account home.
 2. Make a folder called "bin" in your Comet account home (if it's not there already):  `mkdir ~/bin/` and place the script ("cometg09", see file ) in the bin folder `mv cometg09 ~/bin/`
-3. Do `chmod 755 cometg09` to make it executable. 
+3. Do `chmod 755 cometg09` to make it executable. For gaussian 16, please use  `module load gaussian/16.B.01` in the script instead.
 4. In cometg09 file, **replace the existing email address with your address**.
 5. MAKE SURE THAT **nodes=1** AND **ntasks-per-node=8**!
 
