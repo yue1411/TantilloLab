@@ -132,7 +132,7 @@ Here’s a sample .com file:
 
     Fill out [this form](https://wiki.cse.ucdavis.edu/cgi-bin/mps.pl). Then you'll receive a email which give you your username and instruction.
 2.  Both gaussian09 and 16 modules are available. 
-3.  Set up job submission file as follow (**Don't forget to change email**):
+3.  Set up job submission file as follow (**Don't forget to change time/email accordingly**):
 
 ```shell
 input_file="#!/bin/bash
