@@ -129,6 +129,7 @@ Here’s a sample .com file:
 <a name="B"><a/>
 ## 2. Campus MPS cluster access 
 1.  How to apply an account on peloton
+
     Fill out [this form](https://wiki.cse.ucdavis.edu/cgi-bin/mps.pl). Then you'll receive a email which give you your username and instruction.
 2.  Both gaussian09 and 16 modules are available. 
 3.  Set up job submission file as follow (**Don't forget to change email**):
