@@ -4,10 +4,11 @@ Hello there!😊
 
 This repository is for Tantillo Lab general information on:
 
-1. Comet account set up and common questions.
+[1. Comet account set up and common questions.](#A)
 
-2. *Coming soon...*
+[2. Campus MPS cluster access.](#B)
 
+<a name="A"><a/>
 ## 1. Comet new users guide
 
 This section is meant to help you set up comet supercomputer account and help you learn how to submit gaussian jobs. 
@@ -124,8 +125,38 @@ Here’s a sample .com file:
 1.	Email Tiffany (yuezh@ucdavis.edu)
 2.	Go to XSEDE user portal and [submit a ticket](https://portal.xsede.org/group/xup/tickets).
 
-#### Edited: 09-17-17
 
+<a name="B"><a/>
+## 2. Campus MPS cluster access 
+1.  How to apply an account on peloton
+    Fill out [this form](https://wiki.cse.ucdavis.edu/cgi-bin/mps.pl). Then you'll receive a email which give you your username and instruction.
+2.  Both gaussian09 and 16 modules are available. 
+3.  Set up job submission file as follow (**Don't forget to change email**):
+
+```shell
+input_file="#!/bin/bash
+#SBATCH --nodes=1
+#SBATCH --ntasks-per-node=8
+#SBATCH --export=ALL
+#SBATCH -t 10:00:00
+#SBATCH --mail-type=END,FAIL
+#SBATCH --mail-user=yuezh@ucdavis.edu
+
+export my_file=in_file
+module load gaussian/16
+g16 < in_file > id_name.log"
+
+root_name=$(basename $1 .com)
+input_file=$(echo "$input_file" | sed -e s/in_file/$1/g -e s/id_name/$root_name/g)
+echo "$input_file" > $root_name.job
+```
+0.  Check out this page if you'd like to know more about the cluster: 
+https://mps-cluster.ucdavis.edu/
+
+
+
+
+#### Edited: 09-17-19
 <!--
 
 Syntax for myself
