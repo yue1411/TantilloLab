@@ -8,6 +8,8 @@ This repository is for Tantillo Lab general information on:
 
 [2. Campus MPS cluster access.](#B)
 
+[3. Other good resources.](#C)
+
 <a name="A"><a/>
 ## 1. Comet new users guide
 
@@ -154,7 +156,9 @@ echo "$input_file" > $root_name.job
 0.  Check out this page if you'd like to know more about the cluster: 
 https://mps-cluster.ucdavis.edu/
 
-
+<a name="C"><a/>
+## Running dynamics on Orca, see [this](https://github.com/bingkubei/Orcadyn)
+    By Shusen.
 
 
 #### Edited: 09-17-19
