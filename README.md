@@ -65,7 +65,7 @@ Here’s a sample .com file:
     %mem=16GB
     %chk=7_mEH.chk
     %nosave
-    # opt freq b3lyp/6-31+g(d,p) 
+    # opt=(calcfc,ts,noeigen) freq b3lyp/6-31g(d) EmpiricalDispersion=GD3 scf=xqc 
  
     Title Card Required
 
