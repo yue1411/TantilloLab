@@ -49,10 +49,10 @@ To run a Gaussian.com file, you need to set up .job file first. The job file tel
 
 Here’s how to make a .job file:
 
-1. Download “cometg09” in the github repository. Sync it to your Comet account home.
-2. Make a folder called "bin" in your Comet account home (if it's not there already):  `mkdir ~/bin/` and place the script ("cometg09", see file ) in the bin folder `mv cometg09 ~/bin/`
-3. Do `chmod 755 cometg09` to make it executable. For gaussian 16, please use  `module load gaussian/16.B.01` in the script instead.
-4. In cometg09 file, **replace the existing email address with your address**.
+1. Download “cometg16” in the github repository. Sync it to your Comet account home.
+2. Make a folder called "bin" in your Comet account home (if it's not there already):  `mkdir ~/bin/` and place the script ("cometg16", see file ) in the bin folder `mv cometg16 ~/bin/`
+3. Do `chmod 755 cometg16` to make it executable. For gaussian 16, please use  `module load gaussian/16.B.01` in the script instead.
+4. In cometg16 file, **replace the existing email address with your address**.
 5. MAKE SURE THAT **nodes=1** AND **ntasks-per-node=8**!
 
 
@@ -76,7 +76,7 @@ Here’s a sample .com file:
 ```
 2.	Upload the .com from your computer to Comet, in specific project folders as how you prefer. 
 
-3.	In the folder, do `cometg09 [molecule1].com`. A job file should appear as [molecule1].job. Edit the run time of the .job file. For example, #SBATCH -t 1:00:00 means one hour long job. Importantly, we are for time based on the processors you indicate in your job file! Again, **make sure your com file has**:
+3.	In the folder, do `cometg16 [molecule1].com`. A job file should appear as [molecule1].job. Edit the run time of the .job file. For example, #SBATCH -t 1:00:00 means one hour long job. Importantly, we are for time based on the processors you indicate in your job file! Again, **make sure your com file has**:
 ```
     %nprocshared=8
     %mem=16GB
